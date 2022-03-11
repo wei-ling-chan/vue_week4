@@ -46,7 +46,7 @@ const app = createApp({
                     })                   
                 })
         },
-        openModel(status,product){
+        openModal(status,product){
             console.log(status,product);
             if(status==='isNew'){    //新增
                 this.tempProduct = {
@@ -81,14 +81,14 @@ const app = createApp({
        
         // productModal.show();
         // setTimeout(()=>{
-        //     productModal.hide();  //Model在3秒後關掉
+        //     productModal.hide();  //Modal在3秒後關掉
         // },3000);
     }
 });
 
-app.component('productModel',{
+app.component('productModal',{
     props:['tempProduct'],
-    template:`#templateForProductModel`,
+    template:`#templateForProductModal`,
     methods:{
         updataProduct(){
             let url = `${site}/api/${api_path}/admin/product`;

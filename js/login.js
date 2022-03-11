@@ -16,9 +16,9 @@ const app = createApp({
             const url = `${site}/admin/signin`;
             axios.post(url, this.user)
                 .then(res=>{
-                    console.log(res);
+                    //console.log(res);
                     const{token,expired} = res.data;
-                    console.log(token,expired);
+                    //console.log(token,expired);
                     document.cookie = `hexToken=${token}; expires=${new Date(expired)};`; //unix time 轉型
                     window.location = 'products.html'; //轉址
                 })
